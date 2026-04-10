@@ -1,0 +1,118 @@
+.main {
+  padding: 120px 5% 80px;
+  background-color: #fdfaf5;
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 80px;
+}
+
+.label {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 0.7rem;
+  color: #c5a059;
+}
+
+.title {
+  font-family: serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin: 20px 0;
+  color: #1a1a1a;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: white;
+  padding: 50px 40px;
+  text-align: center;
+  border: 1px solid rgba(0,0,0,0.03);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.icon {
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  display: block;
+}
+
+.cardTitle {
+  font-family: serif;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+}
+
+.cardDescription {
+  color: #666;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.divider {
+  width: 40px;
+  height: 2px;
+  background-color: #c5a059;
+  margin: 25px auto 0;
+}
+
+.cta {
+  margin-top: 100px;
+  text-align: center;
+  padding: 60px;
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.cta h3 {
+  font-family: serif;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.cta p {
+  opacity: 0.8;
+  margin-bottom: 30px;
+}
+
+.ctaBtn {
+  display: inline-block;
+  padding: 15px 35px;
+  border: 1px solid white;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  transition: all 0.3s;
+}
+
+.ctaBtn:hover {
+  background: white;
+  color: #1a1a1a;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,86 @@
+.main {
+  padding: 120px 5% 80px;
+  background-color: #fdfaf5;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* Bloc Image avec cadre artistique */
+.imageFrame {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  background-color: #e0e0e0;
+  box-shadow: 15px 15px 0px #c5a059; /* Cadre doré décalé */
+}
+
+.image {
+  object-fit: cover;
+}
+
+/* Bloc Texte */
+.label {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 0.7rem;
+  color: #c5a059;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-family: serif; /* Assure-font-family serif pour le luxe */
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  color: #1a1a1a;
+  margin-bottom: 30px;
+  line-height: 1.1;
+}
+
+.intro {
+  font-size: 1.2rem;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+.content p {
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 25px;
+  font-size: 1rem;
+}
+
+.signature {
+  margin-top: 40px;
+  padding-top: 25px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  font-family: serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #1a1a1a;
+}
+
+/* Adaptations Mobiles */
+@media (max-width: 900px) {
+  .main {
+    padding-top: 100px;
+  }
+  
+  .container {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .imageSide {
+    order: 2; /* L'image passe sous le texte pour faciliter la lecture */
+  }
+
+  .title {
+    font-size: 2.8rem;
+  }
+}

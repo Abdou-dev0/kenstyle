@@ -1,0 +1,70 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 5%;
+  background-color: #2b2926; 
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+/* Style de base des liens */
+.link, .activeLink {
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.3s;
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
+}
+
+.link {
+  color: #fdfaf5;
+}
+
+/* Lien actif : souligné et doré */
+.activeLink {
+  color: #c5a059;
+  border-bottom: 2px solid #c5a059;
+  font-weight: 600;
+}
+
+/* Hover simple */
+.link:hover {
+  color: #c5a059;
+  border-bottom: 2px solid #c5a059;
+}
+
+/* Bouton de droite */
+.cta {
+  text-decoration: none;
+  color: #fdfaf5;
+  border: 1px solid #fdfaf5;
+  padding: 10px 25px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: all 0.3s ease;
+}
+
+.cta:hover {
+  background-color: #c5a059;
+  border-color: #c5a059;
+  color: #fff;
+}
+
+/* Responsive mobile */
+@media (max-width: 900px) {
+  .menu, .actions {
+    display: none;
+  }
+}

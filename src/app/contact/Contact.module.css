@@ -1,0 +1,84 @@
+.main {
+  padding: 120px 5% 80px;
+  background-color: #fdfaf5; /* Fond crème pour plus de douceur */
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Force les deux colonnes */
+  gap: 100px;
+  align-items: flex-start;
+}
+
+.title {
+  font-family: serif; /* Police élégante */
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.title span {
+  color: #c5a059; /* KenStyle en doré */
+}
+
+.desc {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 50px;
+  max-width: 400px;
+}
+
+.infoBlock {
+  margin-bottom: 30px;
+}
+
+.infoBlock strong {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  color: #c5a059;
+  margin-bottom: 5px;
+}
+
+/* Style des inputs */
+.form input, .select, .textarea {
+  width: 100%;
+  padding: 15px 0;
+  border: none;
+  border-bottom: 1px solid #ccc; /* Juste une ligne en bas */
+  background: transparent;
+  font-family: inherit;
+  margin-bottom: 30px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.form input:focus, .textarea:focus {
+  border-bottom: 1px solid #c5a059;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 20px;
+  background: #1a1a1a;
+  color: white;
+  border: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 20px;
+}
+
+.submitBtn:hover {
+  background: #c5a059;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .container { grid-template-columns: 1fr; gap: 50px; }
+  .title { font-size: 2.5rem; }
+}
