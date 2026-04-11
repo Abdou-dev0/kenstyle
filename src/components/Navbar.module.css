@@ -2,80 +2,105 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.2rem 5%;
-  background-color: #2b2926; 
+  padding: 1rem 5%;
+  background-color: #2b2926;
   position: sticky;
   top: 0;
   z-index: 1000;
+  height: 80px;
 }
 
 .menu {
   display: flex;
   list-style: none;
-  gap: 40px;
-}
-
-/* Style de base des liens */
-.link, .activeLink {
-  text-decoration: none;
-  font-size: 0.8rem;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  transition: 0.3s;
-  padding-bottom: 5px;
-  border-bottom: 2px solid transparent;
+  gap: 30px;
 }
 
 .link {
+  text-decoration: none;
   color: #fdfaf5;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.3s;
 }
 
-/* Lien actif : souligné et doré */
-.activeLink {
-  color: #c5a059;
-  border-bottom: 2px solid #c5a059;
-  font-weight: 600;
-}
-
-/* Hover simple */
 .link:hover {
   color: #c5a059;
-  border-bottom: 2px solid #c5a059;
 }
 
-/* Bouton de droite */
 .cta {
   text-decoration: none;
   color: #fdfaf5;
-  border: 1px solid #fdfaf5;
-  padding: 10px 25px;
+  border: 1px solid #c5a059;
+  padding: 10px 20px;
   font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
 
 .cta:hover {
   background-color: #c5a059;
-  border-color: #c5a059;
   color: #fff;
 }
 
-/* Responsive mobile */
+/* --- BURGER --- */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.burger span {
+  width: 28px;
+  height: 2px;
+  background-color: #c5a059;
+  transition: all 0.3s ease;
+}
+
+/* --- RESPONSIVE MOBILE --- */
 @media (max-width: 900px) {
-  .nav {
-    justify-content: center; /* Centre le logo horizontalement */
-    padding: 1rem 5%;       /* Réduit un peu la hauteur sur mobile */
+  .burger {
+    display: flex;
   }
 
-  .menu, .actions {
-    display: none; /* Cache le menu et le bouton CTA */
+  .actions {
+    display: none; /* Cache le bouton RDV pour éviter la surcharge */
   }
 
-  /* Si tu as une image/logo dans .nav, on s'assure qu'elle est bien centrée */
-  .nav img {
-    max-height: 50px; /* Ajuste selon la taille de ton logo */
-    width: auto;
+  .menu {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Menu caché à droite */
+    width: 80%;
+    height: 100vh;
+    background-color: #2b2926;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    transition: 0.4s ease-in-out;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+  }
+
+  .menuOpen {
+    right: 0; /* Menu affiché */
+  }
+
+  .link {
+    font-size: 1.2rem; /* Plus gros sur mobile */
+  }
+
+  /* Animation du Burger en X */
+  .activeBurger span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .activeBurger span:nth-child(2) {
+    opacity: 0;
+  }
+  .activeBurger span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -7px);
   }
 }
