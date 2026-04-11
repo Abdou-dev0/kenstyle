@@ -10,6 +10,9 @@ export default function Footer() {
         <div className={styles.brand}>
           <h2 className={styles.logo}>KENSTYLE</h2>
           <p>Classe par nature, Fun par choix.</p>
+          <p className={styles.phone}>+221 76 298 55 03</p>
+          <p className={styles.phone}>+221 77 693 17 24</p>
+          <p className={styles.phone}>+221 33 905 54 59</p>
         </div>
 
         {/* Colonne 2 : Liens rapides */}
@@ -22,13 +25,12 @@ export default function Footer() {
           <Link href="/contact">Contact</Link>
         </div>
 
-        {/* Colonne 3 : Contact & Réseaux */}
         <div className={styles.contact}>
           <h3>SUIVEZ-NOUS</h3>
-          <a href="https://www.instagram.com/kenstyle125/" target="_blank">Instagram</a>
+          <a href="https://www.instagram.com/ken_barhamm/" target="_blank">Instagram</a>
+          <a href="https://www.snapchat.com/@kenbarham05" target="_blank">Snapchat</a>
+          <a href="https://www.tiktok.com/@kenbarham" target="_blank">Tik tok</a>
           <a href="https://www.facebook.com/kencas.ndiay" target="_blank">Facebook</a>
-          <p className={styles.phone}>+221 76 298 55 03</p>
-          <p className={styles.phone}>+221 33 905 54 59</p>
         </div>
 
       </div>

@@ -32,7 +32,10 @@
 }
 
 .infoBlock {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .infoBlock strong {

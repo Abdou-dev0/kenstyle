@@ -1,10 +1,10 @@
 import "./globals.css";
-import Navbar from "../components/Navbar"; // Vérifie bien le chemin vers ton composant
-import Footer from "../components/Footer"; // Importe aussi le footer pour la cohérence
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export const metadata = {
-  title: "KenStyle | Styliste Modéliste à Dakar",
-  description: "L'élégance sur mesure et le savoir-faire de la haute couture sénégalaise.",
+  title: "KenStyle | Styliste Modéliste à Mbour",
+  description: "Classe par nature, Fun par choix.",
 };
 
 export default function RootLayout({ children }) {

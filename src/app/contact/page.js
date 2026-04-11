@@ -3,12 +3,12 @@ import { useState } from 'react';
 import styles from './Contact.module.css';
 
 export default function Contact() {
-  const [formData, setFormData] = useState({ nom: '', email: '', type: 'Mariage', projet: '' });
+  const [formData, setFormData] = useState({ nom: '', choix: 'Mariage', projet: '' });
 
   const handleWhatsApp = (e) => {
     e.preventDefault();
-    const numero = "221762985503";
-    const message = `Bonjour KenStyle, je suis ${formData.nom}.%0A%0AProjet: ${formData.type}%0A${formData.projet}`;
+    const numero = "221776931724";
+    const message = `Bonjour KenStyle, je m'appel ${formData.nom}.%0A%0AChoix: ${formData.choix},%0A%0AMessage: ${formData.projet}`;
     window.open(`https://wa.me/${numero}?text=${message}`, '_blank');
   };
 
@@ -16,7 +16,6 @@ export default function Contact() {
     <main className={styles.main}>
       <div className={styles.container}>
         
-        {/* Section Gauche : Infos avec style */}
         <div className={styles.infoSide}>
           <h1 className={styles.title}>Contactez <br/><span>KenStyle</span></h1>
           <p className={styles.desc}>Pour toute demande de création ou de rendez-vous, contactez-moi directement.</p>
@@ -29,20 +28,19 @@ export default function Contact() {
             <div className={styles.infoBlock}>
               <strong>TÉLÉPHONE</strong>
               <p>+221 76 298 55 03</p>
+              <p>+221 77 693 17 24</p>
               <p>+221 33 905 54 59</p>
             </div>
           </div>
         </div>
 
-        {/* Section Droite : Formulaire épuré */}
+        {/* Section Droite : Formulaire */}
         <form className={styles.form} onSubmit={handleWhatsApp}>
           <div className={styles.inputGroup}>
-            <input type="text" placeholder="Votre Nom" required onChange={(e) => setFormData({...formData, nom: e.target.value})} />
+            <input type="text" placeholder="Votre Nom et Prenom" required onChange={(e) => setFormData({...formData, nom: e.target.value})} />
           </div>
-          <div className={styles.inputGroup}>
-            <input type="email" placeholder="Votre Email" required onChange={(e) => setFormData({...formData, email: e.target.value})} />
-          </div>
-          <select className={styles.select} onChange={(e) => setFormData({...formData, type: e.target.value})}>
+          
+          <select className={styles.select} onChange={(e) => setFormData({...formData, choix: e.target.value})}>
             <option value="Mariage">Mariage</option>
             <option value="Traditionnel">Traditionnel</option>
             <option value="Prêt-à-porter">Prêt-à-porter</option>
