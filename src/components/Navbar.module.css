@@ -64,7 +64,18 @@
 
 /* Responsive mobile */
 @media (max-width: 900px) {
+  .nav {
+    justify-content: center; /* Centre le logo horizontalement */
+    padding: 1rem 5%;       /* Réduit un peu la hauteur sur mobile */
+  }
+
   .menu, .actions {
-    display: none;
+    display: none; /* Cache le menu et le bouton CTA */
+  }
+
+  /* Si tu as une image/logo dans .nav, on s'assure qu'elle est bien centrée */
+  .nav img {
+    max-height: 50px; /* Ajuste selon la taille de ton logo */
+    width: auto;
   }
 }
