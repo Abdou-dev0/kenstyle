@@ -1,8 +1,8 @@
-"use client"; // Obligatoire pour utiliser useState
+"use client";
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import styles from './Navbar.module.css'; // Adapte selon ton nom de fichier
+import styles from './Navbar.module.css';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +15,7 @@ const Navbar = () => {
     <nav className={styles.nav}>
       <div className={styles.logo}>
         <Link href="/">
-          <Image src="/kenstyle.png" alt="KenStyle Logo" width={120} height={40} />
+          <Image src="/logo.png" alt="KenStyle Logo" width={120} height={40} />
         </Link>
       </div>
 
@@ -30,6 +30,7 @@ const Navbar = () => {
       <ul className={`${styles.menu} ${isOpen ? styles.menuOpen : ''}`}>
         <li><Link href="/" className={styles.link} onClick={() => setIsOpen(false)}>Accueil</Link></li>
         <li><Link href="/collections" className={styles.link} onClick={() => setIsOpen(false)}>Collections</Link></li>
+        <li><Link href="/services" className={styles.link} onClick={() => setIsOpen(false)}>Services</Link></li>
         <li><Link href="/a-propos" className={styles.link} onClick={() => setIsOpen(false)}>À Propos</Link></li>
         <li><Link href="/contact" className={styles.link} onClick={() => setIsOpen(false)}>Contact</Link></li>
       </ul>
