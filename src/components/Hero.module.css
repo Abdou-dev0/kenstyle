@@ -1,16 +1,18 @@
 .hero {
-  height: 75vh; /* Prend toute la hauteur de l'écran */
+  height: 75vh;
   width: 100%;
   display: flex;
-  align-items: center; /* Centre le contenu verticalement */
+  align-items: center;
   padding: 0 15%;
   
-  /* L'image de fond */
+  /* L'image de fond avec correction */
   background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('/kenstyle.png');
-  background-size: contain;
-  background-position: center;
+  background-size: cover;       /* Remplace 'contain' pour remplir tout l'écran */
+  background-position: top center;  /* Garde l'image centrée */
+  background-repeat: no-repeat; /* Empêche la répétition de l'image */
+  
   position: relative;
-  color: #fff; /* Texte en blanc pour contraster avec le fond */
+  color: #fff;
 }
 
 .content {

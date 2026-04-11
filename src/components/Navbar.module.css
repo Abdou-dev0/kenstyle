@@ -2,41 +2,57 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 5%;
+  padding: 0 5%;
   background-color: #2b2926;
   position: sticky;
   top: 0;
   z-index: 1000;
-  height: 80px;
+  height: 85px;
 }
 
 .menu {
   display: flex;
   list-style: none;
-  gap: 30px;
+  gap: 35px;
 }
 
-.link {
+/* Style commun pour les liens */
+.link, .activeLink {
   text-decoration: none;
-  color: #fdfaf5;
   font-size: 0.8rem;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 2px;
   transition: 0.3s;
+  padding-bottom: 8px;
+  border-bottom: 2px solid transparent;
+}
+
+.link {
+  color: #fdfaf5;
+}
+
+/* --- LE SOULIGNEMENT DORÉ --- */
+.activeLink {
+  color: #c5a059;
+  border-bottom: 2px solid #c5a059;
+  font-weight: 600;
 }
 
 .link:hover {
   color: #c5a059;
+  border-bottom: 2px solid #c5a059;
 }
 
 .cta {
   text-decoration: none;
   color: #fdfaf5;
   border: 1px solid #c5a059;
-  padding: 10px 20px;
+  padding: 10px 25px;
   font-size: 0.75rem;
   text-transform: uppercase;
-  transition: 0.3s;
+  letter-spacing: 1.5px;
+  transition: 0.3s ease;
 }
 
 .cta:hover {
@@ -57,50 +73,44 @@
   width: 28px;
   height: 2px;
   background-color: #c5a059;
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
 
-/* --- RESPONSIVE MOBILE --- */
+/* --- RESPONSIVE MOBILE (< 900px) --- */
 @media (max-width: 900px) {
   .burger {
     display: flex;
   }
 
   .actions {
-    display: none; /* Cache le bouton RDV pour éviter la surcharge */
+    display: none;
   }
 
   .menu {
     position: fixed;
     top: 0;
-    right: -100%; /* Menu caché à droite */
+    right: -100%;
     width: 80%;
     height: 100vh;
     background-color: #2b2926;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 40px;
-    transition: 0.4s ease-in-out;
-    box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+    gap: 45px;
+    transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    box-shadow: -10px 0 20px rgba(0,0,0,0.3);
   }
 
   .menuOpen {
-    right: 0; /* Menu affiché */
+    right: 0;
   }
 
-  .link {
-    font-size: 1.2rem; /* Plus gros sur mobile */
+  .link, .activeLink {
+    font-size: 1.1rem;
   }
 
   /* Animation du Burger en X */
-  .activeBurger span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-  .activeBurger span:nth-child(2) {
-    opacity: 0;
-  }
-  .activeBurger span:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -7px);
-  }
+  .activeBurger span:nth-child(1) { transform: rotate(45deg) translate(6px, 6px); }
+  .activeBurger span:nth-child(2) { opacity: 0; }
+  .activeBurger span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 }
