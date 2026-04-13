@@ -47,7 +47,7 @@ export default function Contact() {
             <option value="Gala">Soirée / Gala</option>
             <option value="Affaires ou Autres">Affaires ou Autres</option>
           </select>
-          <textarea className={styles.textarea} placeholder="Parlez-nous de votre projet..." required onChange={(e) => setFormData({...formData, projet: e.target.value})}></textarea>
+          <textarea className={styles.textarea} placeholder="Parlez-nous de votre choix..." required onChange={(e) => setFormData({...formData, projet: e.target.value})}></textarea>
           
           <button type="submit" className={styles.submitBtn}>
             ENVOYER SUR WHATSAPP

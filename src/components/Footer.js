@@ -6,7 +6,6 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.container}>
         
-        {/* Colonne 1 : La Marque */}
         <div className={styles.brand}>
           <h2 className={styles.logo}>KENSTYLE</h2>
           <p>Classe par nature, Fun par choix.</p>
@@ -15,7 +14,6 @@ export default function Footer() {
           <p className={styles.phone}>+221 33 905 54 59</p>
         </div>
 
-        {/* Colonne 2 : Liens rapides */}
         <div className={styles.links}>
           <h3>NAVIGATION</h3>
           <Link href="/">Accueil</Link>
@@ -37,7 +35,6 @@ export default function Footer() {
 
       <div className={styles.bottom}>
         <p>© 2026 KENSTYLE. TOUS DROITS RÉSERVÉS.</p>
-        <p className={styles.dev}>Développé par Abdou Khadre Alwaly Ndiaye</p>
       </div>
     </footer>
   );
